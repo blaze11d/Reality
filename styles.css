@@ -1,0 +1,77 @@
+/* ===== Professional Banking UI Styles ===== */
+:root {
+  /* Corporate Banking Color Scheme */
+  --primary-blue: #1a2a6c;
+  --secondary-blue: #3a5fcd;
+  --accent-gold: #f6c90e;
+  --dark-navy: #1a1a2e;
+  --light-gray: #f8f9fa;
+  --success-green: #28a745;
+  --error-red: #dc3545;
+  --warning-orange: #fd7e14;
+  --info-teal: #17a2b8;
+  
+  /* UI Elements */
+  --card-shadow: 0 10px 30px rgba(26, 42, 108, 0.15);
+  --button-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f7ff;
+  color: var(--dark-navy);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Header Styles ===== */
+header {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ===== Main Content Layout ===== */
+.main-content {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+/* ===== Tab Content Styles ===== */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tab-content.active {
+  display: block;
+}
